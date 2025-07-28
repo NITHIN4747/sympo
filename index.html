@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EEE Symposium 2025 - KSRCE</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Official website for EEE Symposium 2025 hosted by KSRCE. Join us for the most exciting engineering symposium of the year!" />
+    <meta name="keywords" content="EEE Symposium, KSRCE, Engineering, Technology, Workshop, Paper Presentation" />
+    <meta name="author" content="KSRCE" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="EEE Symposium 2025 - KSRCE" />
+    <meta property="og:description" content="Official website for EEE Symposium 2025 hosted by KSRCE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eee-symposium-2025.vercel.app" />
+    
+    <!-- Performance Optimizations -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#1e40af" />
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/src/assets/ksrcelogo.jpg" as="image" />
+    <link rel="preload" href="/src/assets/grid-logo.jpg" as="image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('SW registered: ', registration)
+            })
+            .catch(registrationError => {
+              console.log('SW registration failed: ', registrationError)
+            })
+        })
+      }
+    </script>
+  </body>
+</html>

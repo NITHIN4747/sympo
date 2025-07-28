@@ -1,0 +1,527 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for EEE Symposium */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.dark .bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
+
+
+/* Comprehensive Responsive Design for All Devices */
+
+/* Mobile-first responsive utilities */
+@layer utilities {
+  /* Responsive text sizes */
+  .text-responsive-xs { @apply text-xs sm:text-sm; }
+  .text-responsive-sm { @apply text-sm sm:text-base; }
+  .text-responsive-base { @apply text-base sm:text-lg; }
+  .text-responsive-lg { @apply text-lg sm:text-xl md:text-2xl; }
+  .text-responsive-xl { @apply text-xl sm:text-2xl md:text-3xl; }
+  .text-responsive-2xl { @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl; }
+  .text-responsive-3xl { @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl; }
+  
+  /* Responsive padding and margins */
+  .p-responsive { @apply p-3 sm:p-4 md:p-6 lg:p-8 xl:p-12; }
+  .px-responsive { @apply px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12; }
+  .py-responsive { @apply py-3 sm:py-4 md:py-6 lg:py-8 xl:py-12; }
+  .m-responsive { @apply m-3 sm:m-4 md:m-6 lg:m-8 xl:m-12; }
+  .mx-responsive { @apply mx-3 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-12; }
+  .my-responsive { @apply my-3 sm:my-4 md:my-6 lg:my-8 xl:my-12; }
+  
+  /* Container responsive widths */
+  .container-responsive {
+    @apply w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-4xl mx-auto px-4;
+  }
+  
+  /* Grid responsive layouts */
+  .grid-responsive-1 { @apply grid-cols-1; }
+  .grid-responsive-2 { @apply grid-cols-1 sm:grid-cols-2; }
+  .grid-responsive-3 { @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3; }
+  .grid-responsive-4 { @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4; }
+  
+  /* Flexible spacing */
+  .gap-responsive { @apply gap-3 sm:gap-4 md:gap-6 lg:gap-8; }
+  .space-y-responsive > * + * { @apply mt-3 sm:mt-4 md:mt-6 lg:mt-8; }
+  .space-x-responsive > * + * { @apply ml-3 sm:ml-4 md:ml-6 lg:ml-8; }
+}
+
+/* Device-specific optimizations */
+
+/* Mobile phones (320px - 640px) */
+@media (max-width: 640px) {
+  .mobile-optimized {
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    line-height: 1.5;
+  }
+  
+  /* Touch-friendly interactive elements */
+  .btn-touch {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+  
+  /* Mobile navigation improvements */
+  .mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: var(--background);
+    border-top: 1px solid var(--border);
+  }
+  
+  /* Mobile-specific layouts */
+  .mobile-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Mobile typography */
+  .mobile-title {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+  .mobile-subtitle {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+/* Tablets (641px - 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tablet-optimized {
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    line-height: 1.6;
+  }
+  
+  /* Tablet grid layouts */
+  .tablet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Tablet navigation */
+  .tablet-nav {
+    padding: 0 2rem;
+  }
+  
+  /* Tablet typography */
+  .tablet-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.2;
+  }
+  
+  .tablet-subtitle {
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+    line-height: 1.4;
+  }
+}
+
+/* Laptops/Desktops (1025px - 1920px) */
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .desktop-optimized {
+    font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+    line-height: 1.7;
+  }
+  
+  /* Desktop layouts */
+  .desktop-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  /* Desktop navigation */
+  .desktop-nav {
+    padding: 0 3rem;
+  }
+  
+  /* Desktop typography */
+  .desktop-title {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1.1;
+  }
+  
+  .desktop-subtitle {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    line-height: 1.4;
+  }
+  
+  /* Desktop grid improvements */
+  .desktop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Large screens/TVs (1921px+) */
+@media (min-width: 1921px) {
+  .tv-optimized {
+    font-size: clamp(1.25rem, 1vw, 1.5rem);
+    line-height: 1.8;
+  }
+  
+  /* TV-friendly layouts */
+  .tv-layout {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+  
+  /* Larger interactive elements for TV */
+  .tv-interactive {
+    min-height: 60px;
+    min-width: 60px;
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+  }
+  
+  /* TV navigation */
+  .tv-nav {
+    padding: 0 4rem;
+  }
+  
+  /* TV typography */
+  .tv-title {
+    font-size: clamp(3rem, 3vw, 5rem);
+    line-height: 1.1;
+  }
+  
+  .tv-subtitle {
+    font-size: clamp(1.5rem, 1.5vw, 2rem);
+    line-height: 1.4;
+  }
+  
+  /* TV grid layouts */
+  .tv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+  }
+}
+
+/* High DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .high-dpi {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Sharper borders and shadows */
+  .high-dpi-border {
+    border-width: 0.5px;
+  }
+  
+  .high-dpi-shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+}
+
+/* Landscape orientation optimizations */
+@media (orientation: landscape) and (max-height: 500px) {
+  .landscape-compact {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .landscape-nav {
+    height: 3rem;
+  }
+  
+  .landscape-title {
+    font-size: clamp(1.5rem, 4vh, 2rem);
+  }
+}
+
+/* Portrait orientation optimizations */
+@media (orientation: portrait) {
+  .portrait-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Animation performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for accessibility */
+.focus-visible:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Improved button focus for all devices */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-friendly {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  
+  /* Print-specific typography */
+  .print-title {
+    font-size: 24pt;
+    font-weight: bold;
+    margin-bottom: 12pt;
+  }
+  
+  .print-text {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+}
+
+/* Container queries for modern browsers */
+@container (min-width: 400px) {
+  .container-md {
+    padding: 1.5rem;
+  }
+}
+
+@container (min-width: 600px) {
+  .container-lg {
+    padding: 2rem;
+  }
+}
+
+/* Utility classes for responsive design */
+.aspect-responsive {
+  aspect-ratio: 16/9;
+}
+
+@media (max-width: 640px) {
+  .aspect-responsive {
+    aspect-ratio: 4/3;
+  }
+}
+
+/* Responsive image handling */
+.img-responsive {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive video handling */
+.video-responsive {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+/* Flexible layouts */
+.flex-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .flex-responsive {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+/* Responsive card layouts */
+.card-responsive {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+@media (min-width: 768px) {
+  .card-responsive {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-responsive {
+    padding: 2rem;
+  }
+}
+
