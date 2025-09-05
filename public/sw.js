@@ -1,9 +1,13 @@
-const CACHE_NAME = 'eee-symposium-v1'
+const CACHE_NAME = 'eee-symposium-v2'
 const urlsToCache = [
   '/',
   '/index.html',
-  '/static/js/bundle.js',
-  '/static/css/main.css'
+  '/assets/index-B_7oFH-0.js',
+  '/assets/index-BCr2jo7N.css',
+  '/assets/grid-logo.jpg',
+  '/assets/ksrcelogo-D7Uved5H.jpg',
+  '/manifest.json',
+  '/favicon.ico'
 ]
 
 // Install event
@@ -15,6 +19,8 @@ self.addEventListener('install', event => {
         return cache.addAll(urlsToCache)
       })
   )
+  // Force the waiting service worker to become the active service worker
+  self.skipWaiting()
 })
 
 // Fetch event
@@ -43,4 +49,6 @@ self.addEventListener('activate', event => {
       )
     })
   )
+  // Take control of all clients immediately
+  self.clients.claim()
 }) 
