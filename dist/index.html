@@ -1,87 +1,212 @@
-<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EEE Symposium 2025 - KSRCE</title>
+    <title>GRID 2K25 - EEE Symposium 2025 | K.S.R. College of Engineering (KSRCE)</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Official website for EEE Symposium 2025 hosted by KSRCE. Join us for the most exciting engineering symposium of the year!" />
-    <meta name="keywords" content="EEE Symposium, KSRCE, Engineering, Technology, Workshop, Paper Presentation" />
-    <meta name="author" content="KSRCE" />
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="description" content="GRID 2K25 - Official website for EEE Symposium 2025 hosted by K.S.R. College of Engineering (KSRCE), Tiruchengode. Join us for paper presentations, workshops, and technical events. Register now!" />
+    <meta name="keywords" content="GRID 2K25, GRID 2025, KSRCE, K.S.R. College of Engineering, EEE Symposium 2025, Electrical Engineering, Paper Presentation, Technical Workshop, Innovation, Research, Tiruchengode, Tamil Nadu, Engineering Symposium, Student Events" />
+    <meta name="author" content="K.S.R. College of Engineering" />
+    <meta name="publisher" content="K.S.R. College of Engineering" />
+    <meta name="copyright" content="© 2025 K.S.R. College of Engineering" />
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="EEE Symposium 2025 - KSRCE" />
-    <meta property="og:description" content="Official website for EEE Symposium 2025 hosted by KSRCE" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://eee-symposium-2025.vercel.app" />
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="geo.region" content="IN-TN" />
+    <meta name="geo.placename" content="Tiruchengode" />
+    <meta name="geo.position" content="11.35855179248188;77.83112735118593" />
+    <meta name="ICBM" content="11.35855179248188, 77.83112735118593" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
     
-    <!-- Performance Optimizations -->
+    <!-- Mobile Optimization -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="GRID 2K25" />
+    <meta name="application-name" content="GRID 2K25" />
+    
+    <!-- Performance & Security -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="#1e40af" />
+    <meta name="msapplication-TileColor" content="#1e40af" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
     
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="/src/assets/ksrcelogo.jpg" as="image" />
-    <link rel="preload" href="/src/assets/grid-logo.jpg" as="image" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    
-    <!-- Service Worker Registration -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-              console.log('SW registered: ', registration)
-            })
-            .catch(registrationError => {
-              console.log('SW registration failed: ', registrationError)
-            })
-        })
-      }
+    <!-- Enhanced Organization & Event Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "K.S.R. College of Engineering",
+          "alternateName": ["KSRCE", "K.S.R. College of Engineering"],
+          "url": "https://www.ksrce.ac.in",
+          "logo": "https://ksrce-grid-2025.tech/assets/ksrcelogo.jpg",
+          "description": "K.S.R. College of Engineering (KSRCE) is an autonomous institution affiliated to Anna University, Chennai, and approved by AICTE, New Delhi.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "K.S.R. Kalvi Nagar",
+            "addressLocality": "Tiruchengode",
+            "addressRegion": "Tamil Nadu",
+            "postalCode": "637215",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-4288-274741",
+            "email": "info@ksrce.ac.in",
+            "contactType": "general"
+          },
+          "sameAs": [
+            "https://www.facebook.com/ksrceofficial",
+            "https://www.instagram.com/ksrce_official",
+            "https://www.linkedin.com/school/k-s-r-college-of-engineering"
+          ]
+        },
+        {
+          "@type": "Event",
+          "name": "GRID 2K25 - EEE Symposium 2025",
+          "alternateName": "GRID 2025",
+          "description": "GRID 2K25 is the annual Electrical and Electronics Engineering symposium organized by the Department of EEE at K.S.R. College of Engineering. Featuring paper presentations, technical workshops, and innovative competitions.",
+          "startDate": "2025-10-10T09:00:00+05:30",
+          "endDate": "2025-10-11T18:00:00+05:30",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "K.S.R. College of Engineering",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "K.S.R. Kalvi Nagar",
+              "addressLocality": "Tiruchengode",
+              "addressRegion": "Tamil Nadu",
+              "postalCode": "637215",
+              "addressCountry": "IN"
+            }
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "Department of Electrical and Electronics Engineering, KSRCE",
+            "department": "Electrical and Electronics Engineering"
+          },
+          "performer": {
+            "@type": "EducationalOrganization",
+            "name": "K.S.R. College of Engineering"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "validFrom": "2025-09-01",
+            "url": "https://ksrce-grid-2025.tech"
+          },
+          "image": "https://ksrce-grid-2025.tech/assets/grid-logo.jpg",
+          "url": "https://ksrce-grid-2025.tech"
+        }
+      ]
+    }
     </script>
-  </body>
-</html>
-=======
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EEE Symposium 2025 - KSRCE</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Official website for EEE Symposium 2025 hosted by KSRCE. Join us for the most exciting engineering symposium of the year!" />
-    <meta name="keywords" content="EEE Symposium, KSRCE, Engineering, Technology, Workshop, Paper Presentation" />
-    <meta name="author" content="KSRCE" />
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="EEE Symposium 2025 - KSRCE" />
-    <meta property="og:description" content="Official website for EEE Symposium 2025 hosted by KSRCE" />
+    <!-- Enhanced Open Graph Meta Tags -->
+    <meta property="og:title" content="GRID 2K25 - EEE Symposium 2025 | K.S.R. College of Engineering (KSRCE)" />
+    <meta property="og:description" content="Join GRID 2K25 - The premier Electrical & Electronics Engineering symposium at KSRCE. Paper presentations, workshops, and technical events. Register now!" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://eee-symposium-2025.vercel.app" />
+    <meta property="og:url" content="https://ksrce-grid-2025.tech" />
+    <meta property="og:site_name" content="GRID 2K25 - KSRCE" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:image" content="https://ksrce-grid-2025.tech/assets/grid-logo.jpg" />
+    <meta property="og:image:secure_url" content="https://ksrce-grid-2025.tech/assets/grid-logo.jpg" />
+    <meta property="og:image:alt" content="GRID 2K25 - EEE Symposium 2025 Logo" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    
+    <!-- Enhanced Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ksrce_official" />
+    <meta name="twitter:creator" content="@ksrce_official" />
+    <meta name="twitter:title" content="GRID 2K25 - EEE Symposium 2025 | KSRCE" />
+    <meta name="twitter:description" content="Join GRID 2K25 - The premier Electrical & Electronics Engineering symposium at KSRCE. Paper presentations, workshops, and technical events!" />
+    <meta name="twitter:image" content="https://ksrce-grid-2025.tech/assets/grid-logo.jpg" />
+    <meta name="twitter:image:alt" content="GRID 2K25 - EEE Symposium 2025" />
+    
+    <!-- LinkedIn Specific -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    
+    <!-- WhatsApp Specific -->
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
     
     <!-- Performance Optimizations -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="#1e40af" />
+    <meta name="msapplication-TileColor" content="#1e40af" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
     
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="/assets/images/ksrcelogo-D7Uved5H.jpg" as="image" />
-    <link rel="preload" href="/assets/images/grid-logo-DF7w7mGx.jpg" as="image" />
-    <script type="module" crossorigin src="/assets/js/index-CCqmLImZ.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/js/vendor-dQk0gtQ5.js">
-    <link rel="modulepreload" crossorigin href="/assets/js/ui-DsQ2Q9SD.js">
-    <link rel="modulepreload" crossorigin href="/assets/js/animations-Bt8wZLmu.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-Yh3lYnf9.css">
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Content Security Policy for Development -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'unsafe-inline' https: http:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https: http:; font-src 'self' https:; connect-src 'self' https: ws: wss:;" />
+    
+    <!-- Sitemap and Robots -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    
+    <!-- Additional Performance Hints -->
+    <link rel="modulepreload" href="data:text/jsx;base64,aW1wb3J0IHsgU3RyaWN0TW9kZSB9IGZyb20gJ3JlYWN0Jw0KaW1wb3J0IHsgY3JlYXRlUm9vdCB9IGZyb20gJ3JlYWN0LWRvbS9jbGllbnQnDQppbXBvcnQgJy4vQXBwLmNzcycNCmltcG9ydCBBcHAgZnJvbSAnLi9BcHAuanN4Jw0KDQpjcmVhdGVSb290KGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyb290JykpLnJlbmRlcigNCiAgPFN0cmljdE1vZGU+DQogICAgPEFwcCAvPg0KICA8L1N0cmljdE1vZGU+LA0KKQ0K" />
+    <link rel="prefetch" href="/assets/ksrcelogo-D7Uved5H.jpg" />
+    <link rel="prefetch" href="/assets/grid-logo.jpg" />
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/grid-logo.jpg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/grid-logo.jpg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/grid-logo.jpg" />
+    <link rel="manifest" href="/manifest.json" />
+    <script type="module" crossorigin src="/assets/index-B_7oFH-0.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BCr2jo7N.css">
   </head>
   <body>
     <div id="root"></div>
     
+    <!-- SPA Redirect Script for GitHub Pages -->
+    <script type="text/javascript">
+        // Single Page Apps for GitHub Pages
+        // MIT License
+        // https://github.com/rafgraph/spa-github-pages
+        // This script checks to see if a redirect is present in the query string,
+        // converts it back into the correct url and adds it to the
+        // browser's history using window.history.replaceState(...),
+        // which won't cause the browser to attempt to load the new url.
+        // When the single page app is loaded further down in this file,
+        // the correct url will be waiting in the browser's history for
+        // the single page app to route accordingly.
+        (function(l) {
+            if (l.search[1] === '/' ) {
+                var decoded = l.search.slice(1).split('&').map(function(s) { 
+                    return s.replace(/~and~/g, '&')
+                }).join('?');
+                window.history.replaceState(null, null,
+                    l.pathname.slice(0, -1) + decoded + l.hash
+                );
+            }
+        }(window.location))
+    </script>
+    
     <!-- Service Worker Registration -->
     <script>
       if ('serviceWorker' in navigator) {
@@ -98,4 +223,3 @@
     </script>
   </body>
 </html>
->>>>>>> a48ec9b2 (Fix: Add base configuration and rebuild with correct assets)
