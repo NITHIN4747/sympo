@@ -15,9 +15,9 @@ const Contact = () => {
       designation: "PRINCIPAL"
     },
     {
-      role: "Mentor",
-      name: "Dr. R. JEYABHARATH",
-      designation: "DIRECTOR-ACADEMICS"
+      role: "Over All Co-ordinator",
+      name: "Dr. P. MURUGESAN",
+      designation: "Director - CR&SD"
     },
     {
       role: "Convenor",
@@ -106,12 +106,12 @@ const Contact = () => {
                 <div className="flex items-center space-x-3">
                   <Instagram className="h-5 w-5 text-yellow-500" />
                   <a 
-                    href="https://instagram.com/ksrceofficial" 
+                    href="https://instagram.com/ksrce_official" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-blue-500 hover:text-blue-600 transition-colors"
                   >
-                    @ksrceofficial
+                    @ksrce_official
                   </a>
                 </div>
 
@@ -161,6 +161,57 @@ const Contact = () => {
                     </div>
                   </div>
                 ))}
+              </CardContent>
+            </Card>
+            {/* Map Card */}
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-2">
+                  <MapPin className="h-6 w-6 text-yellow-500" />
+                  <span>Find Us on Map</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="w-full">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1087.2347232125585!2d77.83112735118593!3d11.35855179248188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba964017038dfe3%3A0xd5a68d71e9c1aec7!2sK%20S%20R%20College%20of%20Engineering!5e1!3m2!1sen!2sin!4v1753783403608!5m2!1sen!2sin"
+                    width="100%"
+                    height="220"
+                    style={{ border: 0, borderRadius: '0.5rem', width: '100%', minHeight: '120px' }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="K S R College of Engineering Location Map"
+                  ></iframe>
+                </div>
+              </CardContent>
+            </Card>
+            {/* Have Questions Card */}
+            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+              <CardHeader>
+                <CardTitle className="text-yellow-500 text-2xl font-bold">Have Questions?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-6 max-w-2xl">
+                  Feel free to reach out to our student coordinators for any queries about registration, 
+                  events, or general information about GRID 2K25.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="tel:8220299873"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-lg transition-colors"
+                  >
+                    <Phone className="mr-2 h-4 w-4" />
+                    Call A. SURENDAR
+                  </a>
+                  <a 
+                    href="tel:7010571793"
+                    className="inline-flex items-center justify-center px-6 py-3 border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-semibold rounded-lg transition-colors"
+                  >
+                    <Phone className="mr-2 h-4 w-4" />
+                    Call M. NIYAS AHMMED
+                  </a>
+                </div>
               </CardContent>
             </Card>
           </motion.div>
@@ -244,36 +295,6 @@ const Contact = () => {
             </Card>
           </motion.div>
         </div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-16 text-center bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-8"
-        >
-          <h3 className="text-2xl font-bold mb-4 text-yellow-500">Have Questions?</h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Feel free to reach out to our student coordinators for any queries about registration, 
-            events, or general information about GRID 2K25.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:8220299873"
-              className="inline-flex items-center justify-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-lg transition-colors"
-            >
-              <Phone className="mr-2 h-4 w-4" />
-              Call A. SURENDAR
-            </a>
-            <a 
-              href="tel:7010571793"
-              className="inline-flex items-center justify-center px-6 py-3 border border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-semibold rounded-lg transition-colors"
-            >
-              <Phone className="mr-2 h-4 w-4" />
-              Call M. NIYAS AHMMED
-            </a>
-          </div>
-        </motion.div>
       </div>
     </div>
   )

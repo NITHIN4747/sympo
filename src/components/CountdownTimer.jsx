@@ -10,8 +10,8 @@ const CountdownTimer = () => {
   })
 
   useEffect(() => {
-    // Event date: August 22, 2025 (Day 1 of the symposium)
-    const targetDate = new Date('2025-08-22T09:00:00').getTime()
+    // Event date: October 10, 2025 (Day 1 of the symposium)
+    const targetDate = new Date('2025-10-10T09:00:00').getTime()
 
     const updateCountdown = () => {
       const now = new Date().getTime()

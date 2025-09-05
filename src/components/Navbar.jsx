@@ -16,7 +16,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     { name: 'About', path: '/about' },
     { name: 'Events', path: '/events' },
     { name: 'Contact', path: '/contact' },
-    { name: 'Admin', path: '/admin' },
   ]
 
   const isActive = (path) => location.pathname === path
@@ -50,10 +49,6 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               <div>
                 <h1 className="text-sm sm:text-lg font-bold text-foreground leading-tight">GRID 2K25</h1>
                 <p className="text-xs text-muted-foreground">EEE Symposium</p>
-              </div>
-              {/* Mobile title */}
-              <div className="sm:hidden">
-                <h1 className="text-sm font-bold text-foreground">GRID 2K25</h1>
               </div>
             </Link>
           </div>

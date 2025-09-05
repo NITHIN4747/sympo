@@ -114,7 +114,7 @@ const Hero = () => {
           >
             <Calendar className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-500 mx-auto mb-2 sm:mb-3" />
             <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Day 1</h3>
-            <p className="text-sm sm:text-base text-muted-foreground">22nd August 2025</p>
+            <p className="text-sm sm:text-base text-muted-foreground">10th October 2025</p>
             <p className="text-xs sm:text-sm text-muted-foreground mt-1">Paper Presentations & Technical Events</p>
           </motion.div>
           
@@ -125,7 +125,7 @@ const Hero = () => {
           >
             <Calendar className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-500 mx-auto mb-2 sm:mb-3" />
             <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2">Day 2</h3>
-            <p className="text-sm sm:text-base text-muted-foreground">23rd August 2025</p>
+            <p className="text-sm sm:text-base text-muted-foreground">11th October 2025</p>
             <p className="text-xs sm:text-sm text-muted-foreground mt-1">Workshops & Industry Training</p>
           </motion.div>
           
@@ -163,7 +163,7 @@ const Hero = () => {
             size="lg" 
             className="w-full sm:w-auto bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg touch-manipulation"
           >
-            <Link to="/register">Register Now</Link>
+            <Link to="/events">Register Now</Link>
           </Button>
           <Button 
             asChild 

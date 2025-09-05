@@ -10,13 +10,12 @@ const Footer = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Events', path: '/events' },
-    { name: 'Register', path: '/register' },
     { name: 'Contact', path: '/contact' },
   ]
 
   const eventLinks = [
-    { name: 'Paper Presentation', url: 'https://forms.gle/G9rPeUuGVztqBXz96' },
-    { name: 'Workshop Registration', url: 'https://forms.gle/72smJvTNLHSqvC6K7' },
+    { name: 'Paper Presentation', path: '/paper-registration' },
+    { name: 'Workshop Registration', path: '/workshop-registration' },
   ]
 
   const contactInfo = [
@@ -28,7 +27,7 @@ const Footer = () => {
   return (
     <footer className="bg-card/50 backdrop-blur-sm border-t border-border/50 mt-16 sm:mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-8 sm:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
           {/* College Information */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -98,15 +97,13 @@ const Footer = () => {
             <ul className="space-y-1 sm:space-y-2">
               {eventLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to={link.path}
                     className="text-xs sm:text-sm text-muted-foreground hover:text-yellow-500 transition-colors flex items-center space-x-1 py-1"
                   >
                     <span>{link.name}</span>
                     <ExternalLink className="h-3 w-3" />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -140,7 +137,7 @@ const Footer = () => {
                 <Globe className="h-4 w-4 sm:h-5 sm:w-5" />
               </a>
               <a
-                href="https://instagram.com/ksrceofficial"
+                href="https://instagram.com/ksrce_official"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-yellow-500 hover:text-yellow-600 transition-colors p-1"
@@ -150,9 +147,28 @@ const Footer = () => {
               </a>
             </div>
           </motion.div>
+          {/* Map Location */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="col-span-1 flex justify-center items-start"
+          >
+            <div className="w-full max-w-xs p-2 bg-white dark:bg-card rounded-lg shadow-md border border-border">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1087.2347232125585!2d77.83112735118593!3d11.35855179248188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba964017038dfe3%3A0xd5a68d71e9c1aec7!2sK%20S%20R%20College%20of%20Engineering!5e1!3m2!1sen!2sin!4v1753783403608!5m2!1sen!2sin"
+                width="100%"
+                height="180"
+                style={{ border: 0, borderRadius: '0.5rem', width: '100%', minHeight: '120px' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="K S R College of Engineering Location Map"
+              ></iframe>
+            </div>
+          </motion.div>
         </div>
-
-        {/* Bottom Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -168,30 +184,14 @@ const Footer = () => {
               <p className="text-xs text-muted-foreground mt-1">
                 Department of Electrical and Electronics Engineering
               </p>
+              <p className="text-xs text-muted-foreground mt-1">
+                Made by CodeWave
+              </p>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-500" />
               <span className="text-xs sm:text-sm text-muted-foreground">Tiruchengode, India</span>
             </div>
-          </div>
-        </motion.div>
-
-        {/* Symposium Branding */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-border/30"
-        >
-          <h4 className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-foreground to-yellow-500 bg-clip-text text-transparent">
-            GRID 2K25
-          </h4>
-          <p className="text-xs sm:text-sm text-muted-foreground mt-2">Smart and eco-friendly Innovation in Electrical Engineering</p>
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 mt-3 sm:mt-4">
-            <div className="text-xs text-muted-foreground">22-23 August 2025</div>
-            <div className="hidden sm:block w-2 h-2 bg-yellow-500 rounded-full"></div>
-            <div className="text-xs text-muted-foreground">Tiruchengode, India</div>
           </div>
         </motion.div>
       </div>

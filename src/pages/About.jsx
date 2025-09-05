@@ -2,11 +2,10 @@ import { motion } from 'framer-motion'
 import { Award, Users, BookOpen, Lightbulb, Zap, Globe, Building, GraduationCap, Calendar, MapPin, Mail, ExternalLink } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { Link } from 'react-router-dom'
 import ksrceLogo from '../assets/ksrcelogo.jpg'
 
 const About = () => {
-  const paperPresentationForm = "https://forms.gle/PBczrgC8ZxyRJC2R6"
-  const workshopForm = "https://forms.gle/K8A1bDuZq5EtQrcr6"
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
@@ -201,7 +200,7 @@ const About = () => {
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                     <Calendar className="h-4 w-4" />
-                    <span>August 22-23, 2025</span>
+                    <span>October 10-11, 2025</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                     <MapPin className="h-4 w-4" />
@@ -276,34 +275,34 @@ const About = () => {
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="text-center space-y-4">
+                <div className="flex flex-col items-center justify-center space-y-4 p-4">
                   <h4 className="font-semibold text-gray-900 dark:text-white">Paper Presentation</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 text-center">
                     Present your research on smart and eco-friendly innovations in electrical engineering
                   </p>
                   <Button 
                     asChild 
-                    className="w-full bg-blue-500 hover:bg-blue-600 text-white"
+                    className="w-full bg-blue-500 hover:bg-blue-600 text-white h-12"
                   >
-                    <a href={paperPresentationForm} target="_blank" rel="noopener noreferrer">
+                    <Link to="/paper-registration">
                       Register for Paper Presentation
                       <ExternalLink className="ml-2 h-4 w-4" />
-                    </a>
+                    </Link>
                   </Button>
                 </div>
-                <div className="text-center space-y-4">
+                <div className="flex flex-col items-center justify-center space-y-4 p-4">
                   <h4 className="font-semibold text-gray-900 dark:text-white">Workshops</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 text-center">
                     Join our national level workshops with hands-on experience
                   </p>
                   <Button 
                     asChild 
-                    className="w-full bg-green-500 hover:bg-green-600 text-white"
+                    className="w-full bg-green-500 hover:bg-green-600 text-white h-12"
                   >
-                    <a href={workshopForm} target="_blank" rel="noopener noreferrer">
+                    <Link to="/workshop-registration">
                       Register for Workshops
                       <ExternalLink className="ml-2 h-4 w-4" />
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </div>
