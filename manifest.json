@@ -1,0 +1,44 @@
+{
+  "name": "GRID 2K25 - EEE Symposium 2025",
+  "short_name": "GRID 2K25",
+  "description": "Official website for GRID 2K25 - EEE Symposium 2025 at K.S.R. College of Engineering",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/assets/grid-logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/grid-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "events", "technology"],
+  "shortcuts": [
+    {
+      "name": "Register for Paper Presentation",
+      "short_name": "Paper Registration",
+      "description": "Register for paper presentation at GRID 2K25",
+      "url": "/paper-registration",
+      "icons": [{ "src": "/assets/grid-logo.jpg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Register for Workshop",
+      "short_name": "Workshop Registration",
+      "description": "Register for workshops at GRID 2K25",
+      "url": "/workshop-registration",
+      "icons": [{ "src": "/assets/grid-logo.jpg", "sizes": "96x96" }]
+    }
+  ]
+}

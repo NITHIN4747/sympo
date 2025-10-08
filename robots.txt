@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block access to admin areas
+Disallow: /admin
+
+# Sitemap
+Sitemap: https://ksrce-grid-2025.tech/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
